@@ -11,6 +11,8 @@
 # production
 /build
 
+# http request
+space.http
 # misc
 .DS_Store
 .env.local
