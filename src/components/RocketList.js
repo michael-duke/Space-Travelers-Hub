@@ -5,18 +5,16 @@ import PropTypes from 'prop-types';
 const RocketList = ({
   rocketImage, rocketName, rocketDescription,
 }) => (
-  <div>
+  <div className="flex gap-6">
     <img
-      className=""
+      className="w-1/5 sm:w-1/2 h-fit"
       src={rocketImage}
       alt={rocketName}
     />
-    <div className="">
-      <h3>{ rocketName }</h3>
-      <p>{ rocketDescription }</p>
-      <Button
-        className=""
-      >
+    <div className="text-left">
+      <h3 className="font-bold">{ rocketName }</h3>
+      <p className="my-2">{ rocketDescription }</p>
+      <Button>
         Reserve Rockets
       </Button>
     </div>
