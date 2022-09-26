@@ -7,10 +7,10 @@ function RocketsContainer() {
   const rockets = useSelector(allRockets);
   const dispatch = useDispatch();
 
-  console.log(rockets);
   useEffect(() => {
-    dispatch(getRockets());
-  }, [dispatch]);
+    if (rockets.length === 0) dispatch(getRockets());
+  }, []);
+
   return (
     <>
       <RocketList />

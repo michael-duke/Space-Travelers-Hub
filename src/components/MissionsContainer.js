@@ -8,8 +8,9 @@ const MissionsContainer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
+    if (missions.length === 0) dispatch(getMissions());
+  }, []);
+
   return (
     <>
       <MissionList missions={missions} />

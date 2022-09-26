@@ -21,7 +21,8 @@ module.exports = withMT({
         sl: { max: '500px' },
         ms: { max: '1212px' },
         fold: { max: '327px' },
-        pro: { max: '900px' }
+        pro: { max: '900px' },
+        lgg: { max: '960px' }
       }
     },
   },
