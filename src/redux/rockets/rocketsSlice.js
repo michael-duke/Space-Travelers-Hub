@@ -8,7 +8,7 @@ const initialState = {
   rockets: [],
   status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
-  msg: null,
+  message: null,
 };
 
 // Thunks
@@ -46,6 +46,6 @@ const rocketsSlice = createSlice({
 
 export const allRockets = (state) => state.rockets.rockets;
 export const allStatus = (state) => state.rockets.status;
-export const allMsgs = (state) => state.rockets.msg;
+export const allMessages = (state) => state.rockets.message;
 
 export default rocketsSlice.reducer;

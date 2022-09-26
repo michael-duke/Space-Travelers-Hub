@@ -8,7 +8,7 @@ const initialState = {
   missions: [],
   status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
-  msg: null,
+  message: null,
 };
 
 // Thunks
@@ -20,7 +20,7 @@ export const getMissions = createAsyncThunk(GET_MISSIONS, async () => {
   }
 });
 
-// Reudcer
+// Reducer
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
@@ -46,6 +46,6 @@ const missionsSlice = createSlice({
 
 export const allMissions = (state) => state.missions.missions;
 export const allStatus = (state) => state.missions.status;
-export const allMsgs = (state) => state.missions.msg;
+export const allMesssages = (state) => state.missions.message;
 
 export default missionsSlice.reducer;
