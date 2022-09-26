@@ -11,6 +11,7 @@ const initialState = {
   msg: null,
 };
 
+// Thunks
 export const getRockets = createAsyncThunk(GET_ROCKETS, async () => {
   try {
     return await api.fetchRockets();
@@ -19,6 +20,7 @@ export const getRockets = createAsyncThunk(GET_ROCKETS, async () => {
   }
 });
 
+// Reducer
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,

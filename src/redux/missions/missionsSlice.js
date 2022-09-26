@@ -11,6 +11,7 @@ const initialState = {
   msg: null,
 };
 
+// Thunks
 export const getMissions = createAsyncThunk(GET_MISSIONS, async () => {
   try {
     return await api.fetchMissions();
@@ -19,6 +20,7 @@ export const getMissions = createAsyncThunk(GET_MISSIONS, async () => {
   }
 });
 
+// Reudcer
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
