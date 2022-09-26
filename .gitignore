@@ -13,6 +13,7 @@
 
 # http request
 space.http
+
 # misc
 .DS_Store
 .env.local
@@ -23,3 +24,6 @@ space.http
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# JetBrains files
+.idea/
