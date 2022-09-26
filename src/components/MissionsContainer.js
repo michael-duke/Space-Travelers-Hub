@@ -3,20 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, allMissions } from '../redux/missions/missionsSlice';
 import MissionList from './MissionList';
 
-const MissionContainer = () => {
+const MissionsContainer = () => {
   const missions = useSelector(allMissions);
   const dispatch = useDispatch();
-
-  console.log(missions);
 
   useEffect(() => {
     dispatch(getMissions());
   }, [dispatch]);
   return (
     <>
-      <MissionList />
+      <MissionList missions={missions} />
     </>
   );
 };
 
-export default MissionContainer;
+export default MissionsContainer;
