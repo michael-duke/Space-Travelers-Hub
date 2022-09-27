@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets, allRockets, allStatus } from '../redux/rockets/rocketsSlice';
+import {
+  getRockets, allRockets, allStatus, rocketBooking,
+} from '../redux/rockets/rocketsSlice';
 import RocketList from './RocketList';
 import RocketLoading from './RocketLoading';
 
@@ -15,6 +17,10 @@ function RocketsContainer() {
     }, 2300);
   }, []);
 
+  const handleBooking = (id) => {
+    dispatch(rocketBooking(id));
+  };
+
   return (
     <>
       {status === 'loading' || status === 'idle' ? <RocketLoading />
@@ -23,6 +29,7 @@ function RocketsContainer() {
           <section className="flex flex-col gap-6 px-14 pt-40 pb-10">
             <RocketList
               rockets={rockets}
+              handleBooking={handleBooking}
             />
           </section>
 
