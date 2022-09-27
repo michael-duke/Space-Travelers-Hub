@@ -31,7 +31,7 @@ const rocketsSlice = createSlice({
         ...state.rockets.map((rocket) => (
           (rocket.rocketId !== action.payload) ? rocket : {
             ...rocket,
-            rocketReservation: !rocket.rocketReservation,
+            reserved: !rocket.reserved,
           }
         )),
       ],
