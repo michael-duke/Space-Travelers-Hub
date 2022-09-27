@@ -1,9 +1,9 @@
 import React from 'react';
-import RocketContainer from '../components/RocketContainer';
+import RocketsContainer from '../components/RocketsContainer';
 
 const Rockets = () => (
   <>
-    <RocketContainer />
+    <RocketsContainer />
   </>
 );
 

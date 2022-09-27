@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getRockets, allRockets } from '../redux/rockets/rocketsSlice';
 import RocketList from './RocketList';
 
-const RocketContainer = () => {
+const RocketsContainer = () => {
   const rockets = useSelector(allRockets);
   const dispatch = useDispatch();
 
@@ -19,4 +19,4 @@ const RocketContainer = () => {
   );
 };
 
-export default RocketContainer;
+export default RocketsContainer;
