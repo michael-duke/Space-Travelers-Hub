@@ -9,7 +9,7 @@ const Mission = ({
     <td className="border-r sl:border-r-0 align-top py-4 pl-2">
       {missionName}
     </td>
-    <td className="border-r sl:border-r-0 max-w-lg py-4 text-ellipsis pl-2">
+    <td className="border-r sl:border-r-0 max-w-lg py-4 text-ellipsis p-2">
       {desc}
     </td>
     <td className="border-r sl:border-r-0 text-center p-2">
