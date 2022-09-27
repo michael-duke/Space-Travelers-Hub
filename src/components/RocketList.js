@@ -12,7 +12,7 @@ const RocketList = ({ rockets, handleBooking }) => (
             rocketName={rocket.rocketName}
             rocketDescription={rocket.rocketDescription}
             rocketId={rocket.rocketId}
-            rocketReservation={rocket.rocketReservation}
+            reserved={rocket.reserved}
             handleBooking={handleBooking}
           />
         ))
@@ -25,7 +25,7 @@ RocketList.propTypes = {
     rocketId: PropTypes.string,
     rocketName: PropTypes.string,
     rocketDescription: PropTypes.string,
-    rocketReservation: PropTypes.bool,
+    reserved: PropTypes.bool,
   })).isRequired,
   handleBooking: PropTypes.func.isRequired,
 };
