@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets, allRockets } from '../redux/rockets/rocketsSlice';
+import { getRockets, allRockets, rocketBooking } from '../redux/rockets/rocketsSlice';
 import RocketList from './RocketList';
 
 function RocketsContainer() {
@@ -11,10 +11,15 @@ function RocketsContainer() {
     if (rockets.length === 0) dispatch(getRockets());
   }, []);
 
+  const handleBooking = (id) => {
+    dispatch(rocketBooking(id));
+  };
+
   return (
-    <section className="flex flex-col gap-6 px-14 py-8">
+    <section className="flex flex-col gap-6 px-14 pt-40 pb-10">
       <RocketList
         rockets={rockets}
+        handleBooking={handleBooking}
       />
     </section>
   );
