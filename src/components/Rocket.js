@@ -17,8 +17,7 @@ const Rocket = ({
       <Button
         id={rocketId}
         onClick={() => handleBooking(rocketId)}
-        className={rocketReservation ? 'bg-blue-700 px-2.5 py-2.5 rounded-md text-gray-800 border-2 border-gray-800 bg-white hover:text-white hover:border-none hover:bg-gray-800'
-          : 'bg-blue-700 px-2.5 py-2.5 rounded-md hover:bg-white hover:text-blue-700 hover:border-2 hover:border-blue-700'}
+        className={` shadow-none bg-blue-700 p-2.5 rounded-md border-blue-500 border-2 hover:shadow-blue-500 hover:text-blue-500 hover:bg-white ${rocketReservation ? 'text-gray-800 border-2 border-gray-800 bg-white hover:text-white hover:bg-gray-800' : ''}`}
       >
         { rocketReservation ? 'Cancel Reservation' : 'Reserve Rockets' }
       </Button>

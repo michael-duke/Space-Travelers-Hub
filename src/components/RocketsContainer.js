@@ -14,7 +14,7 @@ function RocketsContainer() {
   useEffect(() => {
     setTimeout(() => {
       if (rockets.length === 0) dispatch(getRockets());
-    }, 2300);
+    }, 1700);
   }, []);
 
   const handleBooking = (id) => {
