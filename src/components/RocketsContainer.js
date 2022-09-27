@@ -12,14 +12,9 @@ const RocketContainer = () => {
   }, [dispatch]);
   return (
     <section className="flex flex-col gap-6 px-14 py-8">
-      { rockets.map((rocket) => (
-        <RocketList
-          key={rocket.rocketId}
-          rocketImage={rocket.rocketImage}
-          rocketName={rocket.rocketName}
-          rocketDescription={rocket.rocketDescription}
-        />
-      )) }
+      <RocketList
+        rockets={rockets}
+      />
     </section>
   );
 };
