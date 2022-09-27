@@ -8,7 +8,7 @@ const initialState = {
   rockets: [],
   status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
-  message: null,
+  message: 'rocket',
 };
 
 // Thunks
