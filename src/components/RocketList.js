@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Rocket from './Rocket';
 
-const RocketList = ({ rockets }) => (
+const RocketList = ({ rockets, handleBooking }) => (
   <>
     {
         rockets.map((rocket) => (
@@ -13,6 +13,8 @@ const RocketList = ({ rockets }) => (
             rocketName={rocket.rocketName}
             rocketDescription={rocket.rocketDescription}
             rocketId={rocket.rocketId}
+            rocketReservation={rocket.rocketReservation}
+            handleBooking={handleBooking}
           />
         ))
       }
@@ -24,7 +26,9 @@ RocketList.propTypes = {
     rocketId: PropTypes.string,
     rocketName: PropTypes.string,
     rocketDescription: PropTypes.string,
+    rocketReservation: PropTypes.bool,
   })).isRequired,
+  handleBooking: PropTypes.func.isRequired,
 };
 
 export default RocketList;
