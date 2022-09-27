@@ -12,7 +12,7 @@ function RocketsContainer() {
   }, []);
 
   return (
-    <section className="flex flex-col gap-6 px-14 py-8">
+    <section className="flex flex-col gap-6 px-14 pt-40 pb-10">
       <RocketList
         rockets={rockets}
       />
