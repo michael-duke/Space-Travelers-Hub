@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Mission from './Mission';
 
-const MissionList = ({ missions }) => (
+const MissionList = ({ missions, handleMissionJoin }) => (
   <>
     <div className="flex mx-4 sm:mx-2 justify-center pt-40">
       <table className="border min-w-full">
@@ -15,8 +15,17 @@ const MissionList = ({ missions }) => (
           </tr>
         </thead>
         <tbody className="">
-          {missions.map(({ missionId: id, missionName, desc }) => (
-            <Mission key={id} id={id} missionName={missionName} desc={desc} />
+          {missions.map(({
+            missionId: id, missionName, desc, joined,
+          }) => (
+            <Mission
+              key={id}
+              id={id}
+              missionName={missionName}
+              desc={desc}
+              handleJoin={handleMissionJoin}
+              joined={joined}
+            />
           ))}
         </tbody>
       </table>
@@ -25,10 +34,14 @@ const MissionList = ({ missions }) => (
 );
 
 MissionList.propTypes = {
-  missions: PropTypes.arrayOf(PropTypes.shape({
-    missionId: PropTypes.string,
-    missionName: PropTypes.string,
-    desc: PropTypes.string,
-  })).isRequired,
+  missions: PropTypes.arrayOf(
+    PropTypes.shape({
+      missionId: PropTypes.string,
+      missionName: PropTypes.string,
+      desc: PropTypes.string,
+      joined: PropTypes.bool,
+    }),
+  ).isRequired,
+  handleMissionJoin: PropTypes.func.isRequired,
 };
 export default MissionList;

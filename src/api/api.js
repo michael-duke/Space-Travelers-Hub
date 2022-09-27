@@ -13,6 +13,7 @@ const api = {
         missionId,
         missionName,
         desc,
+        joined: false,
       }),
     );
     return missions;

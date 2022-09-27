@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const Rocket = ({
   rocketId, rocketImage, rocketName, rocketDescription, rocketReservation, handleBooking,
 }) => (
-  <div className="flex gap-6">
+  <div className="flex sml:flex-col gap-6">
     <img
-      className="w-1/5 sm:w-1/2 h-fit"
+      className="w-1/4 sml:w-fit sm:w-1/2 h-fit"
       src={rocketImage}
       alt={rocketName}
     />
