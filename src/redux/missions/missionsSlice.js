@@ -24,7 +24,16 @@ export const getMissions = createAsyncThunk(GET_MISSIONS, async () => {
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    joinMission: (state, action) => ({
+      ...state,
+      missions: [
+        ...state.missions.map((mission) => (mission.missionId === action.payload
+          ? { ...mission, joined: !mission.joined }
+          : mission)),
+      ],
+    }),
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getMissions.pending, (state) => ({
@@ -43,6 +52,8 @@ const missionsSlice = createSlice({
       }));
   },
 });
+
+export const { joinMission } = missionsSlice.actions;
 
 export const allMissions = (state) => state.missions.missions;
 export const allStatus = (state) => state.missions.status;
