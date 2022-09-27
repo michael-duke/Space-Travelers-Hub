@@ -7,14 +7,13 @@ const MissionsContainer = () => {
   const missions = useSelector(allMissions);
   const dispatch = useDispatch();
 
-  console.log(missions);
-
   useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
+    if (missions.length === 0) dispatch(getMissions());
+  }, []);
+
   return (
     <>
-      <MissionList />
+      <MissionList missions={missions} />
     </>
   );
 };
