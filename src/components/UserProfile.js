@@ -1,15 +1,25 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@material-tailwind/react';
-import { allMissions } from '../redux/missions/missionsSlice';
-import { allRockets } from '../redux/rockets/rocketsSlice';
+import { allMissions, joinMission } from '../redux/missions/missionsSlice';
+import { allRockets, rocketBooking } from '../redux/rockets/rocketsSlice';
 
 const UserProfile = () => {
+  const dispatch = useDispatch();
+
   const missions = useSelector(allMissions);
   const rockets = useSelector(allRockets);
 
   const missionsJoined = missions.filter((mission) => mission.joined);
   const rocketsReserved = rockets.filter((rocket) => rocket.rocketReservation);
+
+  const handleMissionJoin = (id) => {
+    dispatch(joinMission(id));
+  };
+
+  const handleBooking = (id) => {
+    dispatch(rocketBooking(id));
+  };
 
   return (
     <div className="flex min-h-screen items-center gap-8 mx-10">
@@ -26,7 +36,7 @@ const UserProfile = () => {
           : missionsJoined.map(({ missionId: id, missionName }) => (
             <div key={id} className="border text-left p-5 flex items-center justify-between">
               {missionName}
-              <Button>
+              <Button onClick={() => handleMissionJoin(id)}>
                 Leave
               </Button>
             </div>
@@ -42,10 +52,10 @@ const UserProfile = () => {
               <span className="italic">Click on Rockets page to reserve.</span>
             </>
           )
-          : rocketsReserved.map(({ missionId: id, missionName }) => (
+          : rocketsReserved.map(({ rocketId: id, rocketName }) => (
             <div key={id} className="border text-left p-5 flex items-center justify-between">
-              {missionName}
-              <Button>
+              { rocketName }
+              <Button onClick={() => handleBooking(id)}>
                 Cancel
               </Button>
             </div>
