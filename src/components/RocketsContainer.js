@@ -3,20 +3,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getRockets, allRockets } from '../redux/rockets/rocketsSlice';
 import RocketList from './RocketList';
 
-function RocketContainer() {
+const RocketsContainer = () => {
   const rockets = useSelector(allRockets);
   const dispatch = useDispatch();
-
-  console.log(rockets);
 
   useEffect(() => {
     dispatch(getRockets());
   }, [dispatch]);
   return (
-    <>
-      <RocketList />
-    </>
+    <section className="flex flex-col gap-6 px-14 py-8">
+      <RocketList
+        rockets={rockets}
+      />
+    </section>
   );
-}
+};
 
-export default RocketContainer;
+export default RocketsContainer;
