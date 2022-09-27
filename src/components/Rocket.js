@@ -13,7 +13,16 @@ const Rocket = ({
     />
     <div className="text-left">
       <h3 className="font-bold">{ rocketName }</h3>
-      <p className="my-2">{ rocketDescription }</p>
+      <p className="my-2">
+        { rocketReservation ? (
+          <span
+            className="text-xs inline-block py-1 px-2.5 mr-2 leading-none text-center whitespace-nowrap align-baseline font-bold bg-blue-400 text-white rounded-full"
+          >
+            Reserved
+          </span>
+        ) : '' }
+        { rocketDescription }
+      </p>
       <Button
         id={rocketId}
         onClick={() => handleBooking(rocketId)}
