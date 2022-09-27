@@ -9,11 +9,13 @@ const api = {
         mission_id: missionId,
         mission_name: missionName,
         description: desc,
+        wikipedia: link,
       }) => ({
         missionId,
         missionName,
         desc,
         joined: false,
+        link,
       }),
     );
     return missions;
