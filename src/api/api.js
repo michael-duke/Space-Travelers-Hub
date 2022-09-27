@@ -34,6 +34,7 @@ const api = {
           rocketName,
           rocketDescription,
           rocketImage,
+          rocketReservation: false,
         };
       },
     );
