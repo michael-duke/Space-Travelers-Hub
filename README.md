@@ -15,7 +15,7 @@
 
 ## Live Demo 
 
-in progess :smile: 
+[Space Traveler' Hub](https://space-traverlers-hub.netlify.app/) :smile: 
 
 
 ## Getting Started
@@ -44,11 +44,11 @@ Have NodeJS installed and follow the next steps
 - Twitter: [@MikeDuke21](https://twitter.com/MikeDuke21)
 - LinkedIn: [MICHAEL MESFIN](https://linkedin.com/in/https://www.linkedin.com/in/michael-21-duke/)
 
-👤 **Praises**
+👤 **Praises Tula**
 
-- GitHub: [@michael-duke](https://github.com/michael-duke)
-- Twitter: [@MikeDuke21](https://twitter.com/MikeDuke21)
-- LinkedIn: [MICHAEL MESFIN](https://linkedin.com/in/https://www.linkedin.com/in/michael-21-duke/)
+- GitHub: [@praisespjmt](https://github.com/PraisesPJMT)
+- Twitter: [@praisespjmt](https://twitter.com/PraisesPJMT)
+- LinkedIn: [Praises Musa Tula](https://www.linkedin.com/in/praises-tula-9233aa76)
 
 ## 🤝 Contributing
 
