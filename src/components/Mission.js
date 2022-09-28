@@ -12,12 +12,12 @@ const Mission = ({
     <td className="border-r sl:border-r-0 max-w-lg py-4 text-ellipsis p-2">
       {desc}
     </td>
-    <td className="border-r sl:border-r-0 text-center p-2">
+    <td className="border-r sl:border-r-0 text-center p-2 md:w-36">
       <Button className={`uppercase text-sm bg-gray-500 p-1 rounded-none shadow-none hover:shadow-lg hover:shadow-gray-400 ${joined ? 'bg-green-400 hover:shadow-none capitalize' : ''}`}>
         {joined ? 'active member' : 'not a member' }
       </Button>
     </td>
-    <td className="border-r sl:border-r-0 text-center p-2">
+    <td className="border-r sl:border-r-0 text-center p-2 md:w-36">
       <Button
         onClick={() => handleJoin(id)}
         data-mdb-ripple="true"
