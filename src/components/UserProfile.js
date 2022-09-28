@@ -11,7 +11,7 @@ const UserProfile = () => {
   const rockets = useSelector(allRockets);
 
   const missionsJoined = missions.filter((mission) => mission.joined);
-  const rocketsReserved = rockets.filter((rocket) => rocket.rocketReservation);
+  const rocketsReserved = rockets.filter((rocket) => rocket.reserved);
 
   return (
     <div className=" py-20 flex sl:flex-col sl:justify-center sl:items-stretch min-h-screen items-center gap-8 mx-10 sm:mx-2">
@@ -45,7 +45,7 @@ const UserProfile = () => {
                 </span>
               </h3>
               <Button
-                className="bg-gradient-to-r from-blue-500 to-blue-200"
+                className="bg-gradient-to-r from-blue-500 to-blue-200 hover:shadow-none shadow-none border-2 hover:border-blue-400 hover:text-blue-400 hover:from-white hover:to-white"
                 onClick={() => dispatch(joinMission(id))}
               >
                 Leave
