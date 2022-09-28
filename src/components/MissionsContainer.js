@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, allMissions, joinMission } from '../redux/missions/missionsSlice';
+import {
+  getMissions, allMissions, allStatus, allMesssages, joinMission,
+} from '../redux/missions/missionsSlice';
+import Loading from './Loading';
 import MissionList from './MissionList';
 
 const MissionsContainer = () => {
   const missions = useSelector(allMissions);
+  const status = useSelector(allStatus);
+  const message = useSelector(allMesssages);
   const dispatch = useDispatch();
 
   const handleMissionJoin = (id) => {
@@ -12,12 +17,21 @@ const MissionsContainer = () => {
   };
 
   useEffect(() => {
-    if (missions.length === 0) dispatch(getMissions());
+    setTimeout(() => {
+      if (missions.length === 0) dispatch(getMissions());
+    }, 1600);
   }, []);
 
   return (
     <>
-      <MissionList missions={missions} handleMissionJoin={handleMissionJoin} />
+
+      <>
+        {status === 'loading' || status === 'idle' ? <Loading message={message} />
+          : (
+            <MissionList missions={missions} handleMissionJoin={handleMissionJoin} />
+
+          )}
+      </>
     </>
   );
 };

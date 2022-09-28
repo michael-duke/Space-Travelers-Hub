@@ -9,11 +9,13 @@ const api = {
         mission_id: missionId,
         mission_name: missionName,
         description: desc,
+        wikipedia: link,
       }) => ({
         missionId,
         missionName,
         desc,
         joined: false,
+        link,
       }),
     );
     return missions;
@@ -28,6 +30,7 @@ const api = {
         rocket_name: rocketName,
         description: rocketDescription,
         flickr_images: rocketImages,
+        wikipedia: link,
       }) => {
         const rocketImage = rocketImages[0];
         return {
@@ -36,6 +39,7 @@ const api = {
           rocketDescription,
           rocketImage,
           reserved: false,
+          link,
         };
       },
     );
