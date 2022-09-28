@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for Navbar component Renders Navbar correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <header
+        class="border-b-2 border-blue-gray-100 fixed-top bg-white"
+      >
+        <nav
+          class="block w-full rounded-xl backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border border-white/80 bg-white text-white mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 border-none shadow-none"
+        >
+          <div
+            class="container mx-auto flex items-center justify-between text-blue-gray-900"
+          >
+            <a
+              aria-current="page"
+              class="flex items-center gap-2 hover:scale-110 active"
+              href="/"
+            >
+              <img
+                alt="App Logo"
+                class="w-20 sl:w-14"
+                src="app_logo.png"
+              />
+              <h2
+                class="font-bold text-4xl sl:text-xl sm:text-2xl fold:hidden"
+              >
+                Space Travelers' Hub
+              </h2>
+            </a>
+            <nav
+              class="hidden lg:block"
+            >
+              <ul
+                class="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-4"
+              >
+                <li
+                  class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+                >
+                  <a
+                    aria-current="page"
+                    class="text-blue-600 underline text-lg"
+                    href="/"
+                  >
+                    Rockets
+                  </a>
+                </li>
+                <li
+                  class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+                >
+                  <a
+                    class="text-blue-600 text-lg hover:underline"
+                    href="/missions"
+                  >
+                    Mission
+                  </a>
+                </li>
+                <li
+                  class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal border-l-2 border-gray-800 lgg:border-0"
+                >
+                  <a
+                    class="text-blue-600 text-lg hover:underline"
+                    href="/profile"
+                  >
+                    My Profile
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button
+              class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none max-w-[40px] max-h-[40px] rounded-lg text-xs ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              type="button"
+            >
+              <span
+                class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div
+            class="block w-full basis-full overflow-hidden"
+            style="height: 0px; opacity: 0;"
+          >
+            <nav>
+              <ul>
+                <li
+                  class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+                >
+                  <a
+                    aria-current="page"
+                    class="text-blue-600 underline text-lg"
+                    href="/"
+                  >
+                    Rockets
+                  </a>
+                </li>
+                <li
+                  class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+                >
+                  <a
+                    class="text-blue-600 text-lg hover:underline"
+                    href="/missions"
+                  >
+                    Mission
+                  </a>
+                </li>
+                <li
+                  class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal border-l-2 border-gray-800 lgg:border-0"
+                >
+                  <a
+                    class="text-blue-600 text-lg hover:underline"
+                    href="/profile"
+                  >
+                    My Profile
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </body>,
+  "container": <div>
+    <header
+      class="border-b-2 border-blue-gray-100 fixed-top bg-white"
+    >
+      <nav
+        class="block w-full rounded-xl backdrop-saturate-200 backdrop-blur-2xl bg-opacity-80 border border-white/80 bg-white text-white mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 border-none shadow-none"
+      >
+        <div
+          class="container mx-auto flex items-center justify-between text-blue-gray-900"
+        >
+          <a
+            aria-current="page"
+            class="flex items-center gap-2 hover:scale-110 active"
+            href="/"
+          >
+            <img
+              alt="App Logo"
+              class="w-20 sl:w-14"
+              src="app_logo.png"
+            />
+            <h2
+              class="font-bold text-4xl sl:text-xl sm:text-2xl fold:hidden"
+            >
+              Space Travelers' Hub
+            </h2>
+          </a>
+          <nav
+            class="hidden lg:block"
+          >
+            <ul
+              class="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-4"
+            >
+              <li
+                class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+              >
+                <a
+                  aria-current="page"
+                  class="text-blue-600 underline text-lg"
+                  href="/"
+                >
+                  Rockets
+                </a>
+              </li>
+              <li
+                class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+              >
+                <a
+                  class="text-blue-600 text-lg hover:underline"
+                  href="/missions"
+                >
+                  Mission
+                </a>
+              </li>
+              <li
+                class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal border-l-2 border-gray-800 lgg:border-0"
+              >
+                <a
+                  class="text-blue-600 text-lg hover:underline"
+                  href="/profile"
+                >
+                  My Profile
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none max-w-[40px] max-h-[40px] rounded-lg text-xs ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            type="button"
+          >
+            <span
+              class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div
+          class="block w-full basis-full overflow-hidden"
+          style="height: 0px; opacity: 0;"
+        >
+          <nav>
+            <ul>
+              <li
+                class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+              >
+                <a
+                  aria-current="page"
+                  class="text-blue-600 underline text-lg"
+                  href="/"
+                >
+                  Rockets
+                </a>
+              </li>
+              <li
+                class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal"
+              >
+                <a
+                  class="text-blue-600 text-lg hover:underline"
+                  href="/missions"
+                >
+                  Mission
+                </a>
+              </li>
+              <li
+                class="block antialiased font-sans text-sm leading-normal text-blue-600 hover:scale-125 px-4 font-normal border-l-2 border-gray-800 lgg:border-0"
+              >
+                <a
+                  class="text-blue-600 text-lg hover:underline"
+                  href="/profile"
+                >
+                  My Profile
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+    </header>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
