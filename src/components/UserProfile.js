@@ -17,47 +17,84 @@ const UserProfile = () => {
     <div className=" py-20 flex sl:flex-col sl:justify-center sl:items-stretch min-h-screen items-center gap-8 mx-10 sm:mx-2">
       <div className="missions w-1/2 sm:w-2/3 sl:w-full text-left mt-8 max-h-96 overflow-y-scroll">
         <h2 className="text-2xl text-center">My Missions</h2>
-        {missionsJoined.length === 0
-          ? (
-            <>
-              <span className="italic">No Missions Joined, yet</span>
-              <span> 🎯😊. </span>
-              <span className="italic">Click on Missions page to join.</span>
-            </>
-          )
-          : missionsJoined.map(({ missionId: id, missionName, link }) => (
-            <div key={id} className="border text-left p-5 flex items-center justify-between">
+        {missionsJoined.length === 0 ? (
+          <>
+            <span className="italic">No Missions Joined, yet</span>
+            <span> 🎯😊. </span>
+            <span className="italic">Click on Missions page to join.</span>
+          </>
+        ) : (
+          missionsJoined.map(({ missionId: id, missionName, link }) => (
+            <div
+              key={id}
+              className="border text-left p-5 flex items-center justify-between"
+            >
               <h3>
+                🎯
+                {' '}
                 {missionName}
-                <span><a className="underline block text-sm text-purple-800" href={link} target="_blank" rel="noreferrer noopener">Read more</a></span>
+                <span>
+                  <a
+                    className="underline block text-sm text-purple-800"
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Read more
+                  </a>
+                </span>
               </h3>
-              <Button className="bg-gradient-to-r from-blue-500 to-blue-200" onClick={() => dispatch(joinMission(id))}>
+              <Button
+                className="bg-gradient-to-r from-blue-500 to-blue-200"
+                onClick={() => dispatch(joinMission(id))}
+              >
                 Leave
               </Button>
             </div>
-          ))}
+          ))
+        )}
       </div>
-      <div className="rockets w-1/2 text-left mt-8 max-h-96 overflow-y-scroll">
+      <div className="rockets w-1/2 sm:w-2/3 sl:w-full text-left mt-8 max-h-96 overflow-y-scroll">
         <h2 className="text-2xl text-center">My Rockets</h2>
-        {rocketsReserved.length === 0
-          ? (
-            <>
-              <span className="italic">No Rockets Reserved, yet</span>
-              <span> 🚀😊. </span>
-              <span className="italic">Click on Rockets page to reserve.</span>
-            </>
-          )
-          : rocketsReserved.map(({ rocketId: id, rocketName, link }) => (
-            <div key={id} className="border text-left p-5 flex items-center justify-between">
+        {rocketsReserved.length === 0 ? (
+          <>
+            <span className="italic">No Rockets Reserved, yet</span>
+            <span> 🚀😊. </span>
+            <span className="italic">Click on Rockets page to reserve.</span>
+          </>
+        ) : (
+          rocketsReserved.map(({ rocketId: id, rocketName, link }) => (
+            <div
+              key={id}
+              className="border text-left p-5 flex items-center justify-between"
+            >
               <h3>
-                { rocketName }
-                <span><a className="underline block text-sm text-purple-800" href={link} target="_blank" rel="noreferrer noopener">Read more</a></span>
+                🚀
+                {' '}
+                {rocketName}
+                <span>
+                  <a
+                    className="underline block text-sm text-purple-800"
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Read more
+                  </a>
+                </span>
               </h3>
-              <Button className="bg-gradient-to-r from-red-400 to-red-200" onClick={() => dispatch(rocketBooking(id))}>
+              <Button
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="dark"
+                ripple={false}
+                className="bg-gradient-to-r from-red-400 to-red-200 hover:shadow-none shadow-none border-2 hover:border-red-400 hover:text-red-400 hover:from-white hover:to-white"
+                onClick={() => dispatch(rocketBooking(id))}
+              >
                 Cancel
               </Button>
             </div>
-          ))}
+          ))
+        )}
       </div>
     </div>
   );

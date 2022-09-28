@@ -30,6 +30,7 @@ const api = {
         rocket_name: rocketName,
         description: rocketDescription,
         flickr_images: rocketImages,
+        wikipedia: link,
       }) => {
         const rocketImage = rocketImages[0];
         return {
@@ -38,6 +39,7 @@ const api = {
           rocketDescription,
           rocketImage,
           rocketReservation: false,
+          link,
         };
       },
     );
