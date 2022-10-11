@@ -13,6 +13,13 @@
 - Linters:
   - Stylelint, ESLint
 
+## Website Mockup 📱 💻 🖥️
+![screenshot](https://user-images.githubusercontent.com/84629565/195145700-5bb8b56d-1c01-48e9-8136-c3ab1ea70f03.png)
+![screenshot](https://user-images.githubusercontent.com/84629565/195143947-24ac37d7-55c3-480e-a716-822f9c9dd388.png)
+<img width="814" alt="Screenshot 2022-10-11 185647" src="https://user-images.githubusercontent.com/84629565/195143959-e2eaeab4-0c9f-4a14-b229-68722de32441.png">
+![screenshot](https://user-images.githubusercontent.com/84629565/195145498-ad5fdcd2-206e-4f37-bf51-2a8464d95016.png)
+![screenshot](https://user-images.githubusercontent.com/84629565/195145502-65b6c85d-7b47-4643-ae7f-afeb666b98dd.png)
+
 ## Live Demo 
 
 [Space Traveler' Hub](https://space-traverlers-hub.netlify.app/) :smile: 
