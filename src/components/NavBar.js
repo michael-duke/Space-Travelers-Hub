@@ -20,8 +20,9 @@ const NavBar = () => {
 
   const navLinks = [
     { id: 1, name: 'Rockets', link: '/' },
-    { id: 2, name: 'Mission', link: '/missions' },
-    { id: 3, name: 'My Profile', link: '/profile' },
+    { id: 2, name: 'Missions', link: '/missions' },
+    { id: 3, name: 'Dragons', link: '/dragons' },
+    { id: 4, name: 'My Profile', link: '/profile' },
   ];
 
   const activeClassName = 'text-blue-600 underline text-lg';
@@ -30,7 +31,7 @@ const NavBar = () => {
     <Typography
       as="li"
       variant="small"
-      className={`text-blue-600 hover:scale-125 px-4 font-normal ${id === 3 ? 'border-l-2 border-gray-800 lgg:border-0' : ''}`}
+      className={`text-blue-600 hover:scale-125 px-4 font-normal ${id === 4 ? 'border-l-2 border-gray-800 lgg:border-0' : ''}`}
       key={id}
 
     >
