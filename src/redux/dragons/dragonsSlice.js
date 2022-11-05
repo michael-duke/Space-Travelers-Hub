@@ -8,7 +8,7 @@ const initialState = {
   dragons: [],
   status: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
-  message: null,
+  message: 'dragon',
 };
 
 // Thunks
@@ -24,7 +24,14 @@ export const getDragons = createAsyncThunk(GET_DRAGONS, async () => {
 const dragonsSlice = createSlice({
   name: 'dragons',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveDragon: (state, action) => ({
+      ...state,
+      dragons: state.dragons.map((dragon) => (dragon.id !== action.payload
+        ? dragon
+        : { ...dragon, reserved: !dragon.reserved })),
+    }),
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getDragons.pending, (state) => ({
@@ -43,6 +50,8 @@ const dragonsSlice = createSlice({
       }));
   },
 });
+
+export const { reserveDragon } = dragonsSlice.actions;
 
 export const allDragons = (state) => state.dragons.dragons;
 export const allStatus = (state) => state.dragons.status;
