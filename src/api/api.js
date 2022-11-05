@@ -38,6 +38,27 @@ const api = {
     );
     return rockets;
   },
+  fetchDragons: async () => {
+    const response = await fetch(`${baseURL}dragons`);
+    const data = await response.json();
+    const dragons = data.map(
+      ({
+        id,
+        name,
+        type,
+        flickr_images: dragonImages,
+      }) => {
+        const dragonImage = dragonImages[0];
+        return {
+          id,
+          name,
+          type,
+          dragonImage,
+        };
+      },
+    );
+    return dragons;
+  },
 };
 
 export default api;
