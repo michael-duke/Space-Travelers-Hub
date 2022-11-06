@@ -32,7 +32,7 @@ const api = {
         flickr_images: rocketImages,
         wikipedia: link,
       }) => {
-        const rocketImage = rocketImages[0];
+        const rocketImage = rocketImages[Math.floor(Math.random() * rocketImages.length)];
         return {
           rocketId,
           rocketName,
@@ -55,7 +55,7 @@ const api = {
         type,
         flickr_images: dragonImages,
       }) => {
-        const dragonImage = dragonImages[0];
+        const dragonImage = dragonImages[Math.floor(Math.random() * dragonImages.length)];
         return {
           id,
           name,
