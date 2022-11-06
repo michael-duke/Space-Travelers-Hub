@@ -28,26 +28,28 @@ const NavBar = () => {
   const activeClassName = 'text-blue-600 underline text-lg';
 
   const navList = navLinks.map(({ id, link, name }) => (
-    <Typography
-      as="li"
-      variant="small"
-      className={`text-blue-600 hover:scale-125 px-4 font-normal ${id === 4 ? 'border-l-2 border-gray-800 lgg:border-0' : ''}`}
-      key={id}
-
-    >
-      <NavLink
-        className={({ isActive }) => (isActive ? activeClassName : 'text-blue-600 text-lg hover:underline')}
-        end
-        to={link}
+    <>
+      <Typography
+        as="li"
+        variant="small"
+        className="text-blue-600 hover:scale-125 px-3.5 font-normal"
+        key={id}
       >
+        <NavLink
+          className={({ isActive }) => (isActive ? activeClassName : 'text-blue-600 text-lg hover:underline')}
+          end
+          to={link}
+        >
 
-        { name }
-      </NavLink>
-    </Typography>
+          { name }
+        </NavLink>
+      </Typography>
+      {id === 3 && <div className="divider w-0.5 h-7 rounded-md bg-gray-800 lgg:hidden" />}
+    </>
   ));
   return (
     <header className="border-b-2 border-blue-gray-100 fixed-top bg-white">
-      <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4 border-none shadow-none">
+      <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:py-4 border-none shadow-none">
         <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
           <NavLink
             className="flex items-center gap-2 hover:scale-110"

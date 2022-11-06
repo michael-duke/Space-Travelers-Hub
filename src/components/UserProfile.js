@@ -15,7 +15,7 @@ const UserProfile = () => {
 
   return (
     <div className=" py-20 flex sl:flex-col sl:justify-center sl:items-stretch min-h-screen items-center gap-8 mx-10 sm:mx-2">
-      <div className="missions w-1/2 sm:w-2/3 sl:w-full text-left mt-8 max-h-96 overflow-y-scroll">
+      <div className="missions w-1/2 sm:w-2/3 sl:w-full mt-8 max-h-96 overflow-y-scroll">
         <h2 className="text-2xl text-center">My Missions</h2>
         {missionsJoined.length === 0 ? (
           <>
@@ -54,7 +54,7 @@ const UserProfile = () => {
           ))
         )}
       </div>
-      <div className="rockets w-1/2 sm:w-2/3 sl:w-full text-left mt-8 max-h-96 overflow-y-scroll">
+      <div className="rockets w-1/2 sm:w-2/3 sl:w-full mt-8 max-h-96 overflow-y-scroll">
         <h2 className="text-2xl text-center">My Rockets</h2>
         {rocketsReserved.length === 0 ? (
           <>
