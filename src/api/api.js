@@ -61,6 +61,7 @@ const api = {
           name,
           type,
           dragonImage,
+          reserved: false,
         };
       },
     );
