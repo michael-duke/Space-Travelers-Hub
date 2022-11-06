@@ -1,10 +1,36 @@
-import React from 'react';
-import dragonImg from '../assets/dragon-toothless.jpg';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  getDragons, allDragons, allStatus, allMessages, reserveDragon,
+} from '../redux/dragons/dragonsSlice';
+import DragonList from './DragonList';
+import Loading from './Loading';
 
-const DragonsContainer = () => (
-  <div className="flex items-center border-deep-orange-300 border min-h-screen">
-    <img src={dragonImg} alt="dragom-img" className="cursor-pointer w-2/3 h-80 mx-auto my-auto object-cover hover:scale-105 transition duration-500" />
-  </div>
-);
+function DragonsContainer() {
+  const dragons = useSelector(allDragons);
+  const status = useSelector(allStatus);
+  const message = useSelector(allMessages);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (dragons.length === 0) dispatch(getDragons());
+    }, 1600);
+  }, []);
+
+  const handleReserve = (id) => {
+    dispatch(reserveDragon(id));
+  };
+  return (
+    <>
+      {status === 'loading' || status === 'idle' ? <Loading message={message} />
+        : (
+          <DragonList dragons={dragons} handleReserve={handleReserve} />
+
+        )}
+    </>
+  );
+}
 
 export default DragonsContainer;
