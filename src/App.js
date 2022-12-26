@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Missions from './pages/Missions';
 import Rockets from './pages/Rockets';
 import Dragons from './pages/Dragons';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/dragons" element={<Dragons />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
